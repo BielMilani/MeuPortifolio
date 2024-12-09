@@ -1,0 +1,143 @@
+/* ===== Reset Básico ===== */
+html, body {
+  height: 100%; /* Garante que o body ocupe toda a altura da janela */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif; /* Define fonte padrão */
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que o body ocupe toda a altura da janela */
+}
+
+/* ===== Estilo do Cabeçalho ===== */
+header {
+  background: var(--primary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: var(--spacing);
+}
+
+header h1 {
+  margin: 0;
+}
+
+header h1 span {
+  color: var(--secondary-color);
+}
+
+/* ===== Estilo do Menu de Navegação ===== */
+nav {
+  background: var(--primary-color);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+nav ul li a.active {
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+/* ===== Estilo do Corpo ===== */
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+  line-height: 1.6;
+  padding: var(--spacing);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: var(--spacing);
+}
+
+section {
+  flex-grow: 1; /* O conteúdo principal ocupa o espaço restante */
+  margin-bottom: var(--spacing);
+}
+
+/* ===== Grid para Projetos ===== */
+.projetos-grid {
+  display: flex; /* Flexbox em vez de grid */
+  flex-wrap: wrap;
+  gap: var(--spacing);
+  justify-content: space-around;
+}
+
+.projeto-item {
+  flex: 1 1 250px; /* Ocupa pelo menos 250px */
+  max-width: 300px; /* Limita a largura máxima */
+  background: var(--background-color);
+  border: 1px solid #ddd;
+  padding: var(--spacing);
+  text-align: center;
+}
+
+/* ===== Estilo do Rodapé ===== */
+footer {
+  background: var(--primary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: var(--spacing);
+  margin-top: var(--spacing);
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+  .projetos-grid {
+    flex-direction: column; /* Ajusta para uma única coluna */
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column; /* Torna o menu vertical */
+    align-items: center;
+  }
+}
+
+/* ===== Variáveis CSS ===== */
+:root {
+  --primary-color: #333;
+  --secondary-color: #f39c12;
+  --text-color: #fff;
+  --background-color: #f4f4f4;
+  --spacing: 1rem; /* Espaçamento padrão */
+}
+/* Estilo básico para o botão */
+button {
+  background-color: #f39c12; /* Cor de fundo azul */
+  color: white; /* Cor do texto */
+  padding: 10px 20px; /* Espaçamento interno */
+  border: none; /* Remove a borda padrão */
+  border-radius: 5px; /* Borda arredondada */
+  font-size: 16px; /* Tamanho do texto */
+  cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+}
+
+button:hover {
+  background-color: #f39c12; /* Cor mais escura quando passar o mouse */
+}

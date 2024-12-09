@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <title>Formulário de Contato</title>
+  <style>
+  
+    body {
+      font-family: Arial, sans-serif; 
+      background-color: #000000; 
+      margin: 0;
+      padding: 0;
+      display: flex; 
+      justify-content: center;
+      align-items: center;
+      height: 100vh; 
+    }
+
+    /* Estilo da caixa do formulario */
+    .form-container {
+      background: #fff;
+      padding: 20px; 
+      border-radius: 8px; 
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    /* Estilo para o título do formulário */
+    .form-container h2 {
+      margin-bottom: 20px; 
+      text-align: center; 
+      color: #333; 
+    }
+
+    /* Estilo para os rótulos dos campos */
+    .form-container label {
+      display: block; 
+      margin-bottom: 8px; 
+      font-weight: bold; 
+      color: #555; 
+    }
+
+    /* Estilo para os campos de entrada e área de texto */
+    .form-container input,
+    .form-container textarea {
+      width: 100%; 
+      padding: 10px; 
+      margin-bottom: 15px; 
+      border: 1px solid #ccc; 
+      border-radius: 4px; 
+      font-size: 14px; 
+    }
+
+    /* Estilo para o botão de envio */
+    .form-container button {
+      background: rgb(255, 123, 0); 
+      color: white; 
+      border: none; 
+      padding: 10px; 
+      border-radius: 4px; 
+      font-size: 16px; 
+      cursor: pointer; 
+      width: 100%; 
+    }
+
+   
+  </style>
+</head>
+<body>
+  <!-- caixa do formulário -->
+  <div class="form-container">
+    <h2>Contato</h2>
+    <!-- Início do formulário -->
+    <form action="/enviar-contato" method="POST">
+      <!-- Campo para o nome -->
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+      
+      <!-- Campo para o e-mail -->
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+      
+      <!-- Campo para a mensagem -->
+      <label for="message">Mensagem:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Digite sua mensagem" required></textarea>
+      
+      <!-- Botão de envio -->
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</body>
+</html>
